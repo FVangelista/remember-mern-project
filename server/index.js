@@ -15,6 +15,10 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Mern project api");
+});
+
 const PORT = process.env.PORT || 5500;
 
 mongoose
